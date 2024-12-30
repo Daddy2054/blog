@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     "django.contrib.sites",
     "django.contrib.sitemaps",
     "django.contrib.staticfiles",
+    "django.contrib.postgres",
     "taggit",
     "blog.apps.BlogConfig",
 ]
@@ -147,6 +148,6 @@ DEFAULT_FROM_EMAIL = config("DEFAULT_FROM_EMAIL")
 # docker run --name=blog_db -e POSRGRES_DB=blog -e POSTGRES_USER=blog -e POSTGRES_PASSWORD=password -p 5432:5432 -d postgres:16.2
 # python manage.py dumpdata --indent=2 --output=mysite_data.json
 # change config
-#  python manage.py migrate  
+#  python manage.py migrate
 # delete field "pk" from  moodel conttenttypes in mysite_data.json
 # python manage.py loaddata mysite_data.json
